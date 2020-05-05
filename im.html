@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>class-task</title>
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .centered {
+    font-size: larger;
+ position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-overflow: 100px;
+  color:#e7ecf0;
+}
+
+
+
+
+        header {
+            background-color: #4385c1;
+            padding: 8px 101px;
+
+            text-align: inline;
+            font-size: 25px;
+            color: white;
+            height: 264px;
+            width: 102%;
+            display: flex;
+
+        }
+
+        #p-header {
+            font-size: 20px;
+            width: 55vw;
+            text-align: center;
+            padding: 0em;
+            margin-left: 85px;
+            ;
+            color: #AED6F1;
+        }
+
+        #h1-header {
+
+            width: 55vw;
+            text-align: center;
+            margin-left: 81px;
+            margin-top: 1em;
+            font-size: 59px;
+        }
+
+
+        .side-nav {
+            text-align: left;
+            margin: -10px;
+           
+        }
+
+        #p-nav {
+            display: block;
+    text-align: center;
+    margin-top: 1em;
+        }
+
+        button {
+            margin-top: 100px;
+            background-color: rgb(65, 139, 189);
+            color: white;
+            border: 1px solid rgb(160, 210, 243);
+            border-radius: 5px;
+            font-size: 15px;
+            margin-left: 19px;
+            display: inline-block;
+            height: 49px;
+            width: 142px;
+        }         
+
+        .tablink {
+            background-color: #033057;
+            color: white;
+            padding: -33px 38px 0px -1px;
+            margin: -1px 7px 25px -13px;
+            font-size: 17px;
+            width: 296px;
+            padding-left: 35px;
+            margin-right: -1em;
+        }
+
+        .tablink:hover {
+            background-color: #02203a;
+        }
+
+
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 20px;
+            text-align: centen;
+        }
+
+        #make-your-move-div {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #729B1E;
+            color: white;
+            height: 105px;
+    margin-top: 35px;
+
+        }
+
+
+
+        .img {
+            display: block;
+            width: 80%;
+            margin-left: 9em;
+        }
+
+        .article0 {
+            float: left;
+            padding: 20px 40px;
+            width: 30%;
+            background-color: #e7ecf0;
+            height: 300px;
+            color: #428bcf;
+            font-size: 20px;
+            margin: 20px;
+        }
+
+
+        .article2 {
+            float: left;
+            padding: 32px 40px;
+            width: 30%;
+            background-color: #620e6e;
+            height: 300px;
+            color: white;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .article3 {
+            float: left;
+            padding: 32px 40px;
+            width: 30%;
+            background-color: #4385c1;
+            height: 300px;
+            color: white;
+            font-size: 20px;
+            margin: 11px;
+        }
+
+        .article4 {
+            padding: 10px 10px;
+            background-color: blue;
+            color: white;
+            margin-left: 10%;
+            margin-bottom: 15%;
+            margin-right: 80%;
+        }
+
+        .main {
+            color: #7aa120;
+            border: 2px solid #7aa120;
+            width: 5vw;
+            text-align: center;
+            border-radius: 5px;
+
+        }
+
+
+        #h1-make-your-move {
+            font-size: 45px;
+        }
+
+
+        #p-make-your-move {
+            font-size: 20px;
+            width: 55vw;
+        }
+
+
+        #main-div-upcoming-event {
+            width: 34vw;
+    height: 41vh;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 3vw;
+    padding-top: 17px;
+        }
+
+
+        #h2-event-div {
+            font-size: 20px;
+        }
+
+        .event-div-text-dates {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .upcoming-event-dates-div {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border: 3px solid #cccccc;
+            color: #7aa120;
+            font-size: 20px;
+            text-align: center;
+            padding: 0 1vw;
+            border-radius: 5px;
+           
+            margin-bottom: 2vh;
+        }
+
+        .a-event-div {
+            color: #4385c1;
+            text-decoration: none;
+        }
+
+        .p-month {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .p-date {
+            font-size: 18px;
+        }
+
+        .p-text {
+            font-size: 18px;
+            margin-left: 3vw;
+        }
+
+        .button2 {
+            width: 20em;
+            height: 29px;
+            font-weight: 800;
+            color: rgb(42, 156, 190);
+            border: 2px solid rgb(18, 124, 156);
+            border-radius: 5px;
+            background-color: white;
+            padding: 5px -1px -87px;
+            margin: 8px;
+
+        }
+
+        #btn {
+            margin: 6em -1em -3em 2em;
+            display: inline-block
+        }
+
+
+        .list-footer {
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgb(39, 41, 44);
+            padding: 5% 3%;
+            margin-bottom: 2%;
+        }
+
+        #footer-list-div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+
+        .ul-footer {
+            width: 20vw;
+            margin-right: 3%;
+
+        }
+
+        .a-h2-footer {
+            text-decoration: none;
+            color: white;
+            font-size: 21px;
+        }
+
+        .a-footer {
+            text-decoration: none;
+            color: #A5AAAF;
+            font-size: 19px;
+        }
+
+        .a-footer:hover {
+            text-decoration: underline;
+        }
+
+        .li-footer {
+            list-style-type: none;
+        }
+
+        #p-footer {
+            color: white;
+            text-align: center;
+            margin: 5% 0;
+            font-size: 16px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="side-nav">
+
+            <p id="p-nav"> Directories </p>
+            <p id="p-nav">Calendars</p>
+            <p id="p-nav">News</p>
+            <p id="p-nav"> Library </p>
+
+        </nav>
+
+        <section>
+            <h2 id="h1-header"> SIMMONS</h2>
+            <p id="p-header">BOSTON .MASSACHUSETTS</p>
+        </section>
+
+        <button class="button">search</button>
+        <button class="button">link for</button>
+
+    </header>
+
+    <div class="tabcontent">
+        <h1> About Simmons</h1>
+
+    </div>
+
+    <div class="tabcontent">
+        <h1>Academics </h1>
+
+    </div>
+
+    <div class="tabcontent">
+        <h1> Admission & Financial Aid </h1>
+    </div>
+
+
+    <div class="tabcontent">
+        <h1> Student Life</h1>
+     </div>
+
+    <button class="tablink"> About Simmons</button>
+    <button class="tablink"> Academics</button>
+    <button class="tablink"> Admission & Financial Aid</button>
+    <button class="tablink"> Student Life</button>
+    <button class="tablink"> Alumnae/i & Friends</button>
+
+    <br>
+
+
+    <img class="img"
+        src="https://raw.githubusercontent.com/techkaro-circle/tk-class02-task/master/mockup/Main%20Page%20Image.PNG"></img>
+        <div class="centered">
+            <hr>
+            <h1> Academics</h1>
+            <p>The Journey Start Here.
+<hr>
+            </p>
+        
+       
+
+</div>
+
+    <div id="make-your-move-div">
+        <h1 id="h1-make-your-move">Make Your Move > </h1>
+        <p id="p-make-your-move">
+            You will work, discover, evolve and emerge with a new kind of confidence. A new kind of courage. A leader of
+            yourself, your community, and the world. Apply now.
+        </p>
+    </div>
+
+  
+    <br>
+
+    <section>
+        <div class="article0">
+            <h1> Undergraduate Programs</h1>
+            <p>You'll find over 50 programs — and one that's just right for you.
+            </p>
+        </div>
+
+        <div class="article0">
+
+            <h1> Graduate Programs </h1>
+            <p>Preparing you for the road ahead, whether it's the logical next step or a radical shift in direction.
+            </p>
+
+        </div>
+
+        <div class="article0">
+
+            <h1> Accelerated Programs </h1>
+            <p> Make the most of your Simmons moment. Combined undergraduate/graduate programs save time and increase
+                value.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section>
+        <div class="article2">
+
+            <h1> Research That Speaks Volumes. </h1>
+            <br>
+            <p>Explore Projects ></p>
+
+        </div>
+
+        <div class="article3">
+
+            <h1>Taking Pride in Mentoring</h1>
+            <br>
+            <p> Meet the Faculty > </p>
+
+        </div>
+
+
+    </section>
+    <section>
+
+        <div id="main-div-upcoming-event">
+            <h2 id="h2-event-div"> Upcoming School Events</h2>
+            <div class="event-div-text-dates">
+                <div class="upcoming-event-dates-div">
+                    <p class="p-month">JAN</p>
+                    <p class="p-date">20</p>
+
+                </div>
+                <p class="p-text"><a class="a-event-div" href="">Student Art Show</a></p>
+            </div>
+            <div class="event-div-text-dates">
+                <div class="upcoming-event-dates-div">
+                    <p class="p-month">JAN</p>
+                    <p class="p-date">30</p>
+
+                </div>
+                <p class="p-text"><a class="a-event-div" href="">Graduate Studies Addmission <br> Information
+                        Session</a></p>
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <div id="btn">
+        <button class="button2">Visit Simmons</button>
+        <button class="button2">Apply</button>
+        <button class="button2"> Request Information</button>
+        <button class="button2"> Support Simmons </button>
+
+    </div>
+
+    <footer>
+        <div id="footer-list-div">
+            <ul class="ul-footer">
+                <h2><a class="a-h2-footer" href="">Academics</a></h2>
+                <li class="li-footer"><a class="a-footer" href="">Undergraduate Programs</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Graduate Programs</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Certificate Programs</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Accelerated And Dual Degree</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Programs</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Continuning And Professional</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Eduaction</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Faculty</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Research</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Schools</a></li>
+            </ul>
+            <ul class="ul-footer">
+                <h2><a class="a-h2-footer" href="">Student Life</a></h2>
+                <li class="li-footer"><a class="a-footer" href="">Life At Simmons</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Activities And Organizations</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Student Services</a></li>
+            </ul>
+            <ul class="ul-footer">
+                <h2><a class="a-h2-footer" href="">Alumnae/i And Friends</a></h2>
+                <li class="li-footer"><a class="a-footer" href="">Connect</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Give</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Events</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Alumnae/i Directory</a></li>
+            </ul>
+            <ul class="ul-footer">
+                <h2><a class="a-h2-footer" href="">Athletics</a></h2>
+                <h2><a class="a-h2-footer" href="">Directories</a></h2>
+                <h2><a class="a-h2-footer" href="">Library</a></h2>
+                <h2><a class="a-h2-footer" href="">Contact Webmaster</a></h2>
+            </ul>
+            <ul class="ul-footer">
+                <h2><a class="a-h2-footer" href="">Admission And Financial Aid</a></h2>
+                <li class="li-footer"><a class="a-footer" href="">Undergraduate Admission</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Graduate Admission</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Student Financial Services</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Visit Simmon</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Request Information</a></li>
+            </ul>
+            <ul class="ul-footer">
+                <h2><a class="a-h2-footer" href="">About Simmon</a></h2>
+                <li class="li-footer"><a class="a-footer" href="">Why Simmons</a></li>
+                <li class="li-footer"><a class="a-footer" href="">leadership</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Work At Simmon</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Conferences And Lectures</a></li>
+                <li class="li-footer"><a class="a-footer" href="">News</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Administrative offices and Services</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Contact Us</a></li>
+            </ul>
+            <ul class="ul-footer">
+                <h2><a class="a-h2-footer" href="">Resources For</a></h2>
+                <li class="li-footer"><a class="a-footer" href="">Future Undergrades</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Admitted Undergraduates</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Students</a></li>
+                <li class="li-footer"><a class="a-footer" href="">International Students</a></li>
+                <li class="li-footer"><a class="a-footer" href="">For Parents And Family</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Faculty And Staff</a></li>
+                <li class="li-footer"><a class="a-footer" href="">Alumnae/i And Friends</a></li>
+                <li class="li-footer"><a class="a-footer" href="">For Media</a></li>
+            </ul>
+
+        </div>
+        
+        <br>
+
+        <hr>
+        <p id="p-footer">
+            2016 Simmons College | 300 The Fenway,Boston,MA 02115 | 617-521-2000
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
